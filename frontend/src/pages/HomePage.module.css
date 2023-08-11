@@ -68,7 +68,7 @@
 @media (min-width: 1200px) {
 	.shop-now {
 		display: flex;
-		background-color: var(--color-theme-100);
+		/* background-color: var(--color-theme-100); */
 		margin-bottom: 2rem;
 	}
 

@@ -13,7 +13,9 @@ app.use(
 	})
 )
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
+const stripe = require('stripe')(
+	'sk_test_51NaepIKHUEeYaJvQUaUY84A2yzFbvCrF66gQGDHdaYczlkj83EulcFLQlcIYEURYY4QBRnW8IE0m9CWuTEtwCCwr00ciOYH1Pi'
+)
 
 // app.get('/api', (req, res) => {
 //   const path = `/api/item/${v4()}`;
@@ -44,8 +46,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
 					quantity: item.amount,
 				}
 			}),
-			success_url: `https://shop-demo2-client.vercel.app//success`,
-			cancel_url: `https://shop-demo2-client.vercel.app//cancel`,
+			success_url: `https://shop-demo2-client.vercel.app/success`,
+			cancel_url: `https://shop-demo2-client.vercel.app/cancel`,
 		})
 		res.json({ url: session.url })
 	} catch (e) {
@@ -56,7 +58,5 @@ app.post('/api/create-checkout-session', async (req, res) => {
 app.get('/api/hello', (req, res) => {
 	res.json('Hello')
 })
-
-app.listen(4000)
 
 module.exports = app
