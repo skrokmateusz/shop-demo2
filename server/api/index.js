@@ -9,7 +9,7 @@ const cors = require('cors')
 app.use(express.json())
 app.use(
 	cors({
-		origin: 'https://shop-demo2-client.vercel.app/',
+		origin: 'https://shop-demo2-client.vercel.app',
 	})
 )
 
@@ -58,5 +58,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
 app.get('/api/hello', (req, res) => {
 	res.json({ hello: 'hello' })
 })
+
+app.listen('https://shop-demo2-topaz.vercel.app/')
 
 module.exports = app
