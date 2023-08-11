@@ -14,7 +14,7 @@ const CartPage = () => {
 	const cartProductCtx = useContext(CartProductContext)
 
 	const payHandler = () => {
-		fetch('http://localhost:4000/create-checkout-session', {
+		fetch('https://shop-demo2-topaz.vercel.app/create-checkout-session', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
