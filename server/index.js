@@ -42,6 +42,4 @@ app.get('/hello', (req, res) => {
 	res.json('Hello')
 })
 
-// app.listen(4000)
-
-module.exports = app;
+app.listen(4000)
