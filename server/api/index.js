@@ -53,7 +53,7 @@ app.post('/create-checkout-session', async (req, res) => {
 	}
 })
 
-app.get('/hello', (req, res) => {
+app.get('/api/hello', (req, res) => {
 	res.json('Hello')
 })
 
