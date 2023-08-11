@@ -13,29 +13,32 @@ import classes from '../pages/CartPage.module.css'
 const CartPage = () => {
 	const cartProductCtx = useContext(CartProductContext)
 
-	const payHandler = () => {
-		fetch('https://shop-demo2-topaz.vercel.app/api/create-checkout-session', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				items: cartProductCtx,
-			}),
-		})
-			.then(res => {
-				if (res.ok) return res.json()
-				return res.json().then(json => {
-					Promise.reject(json)
-					console.log(json)
-				})
-			})
-			.then(({ url }) => {
-				window.location = url
-			})
-			.catch(e => {
-				console.error(e.error)
-			})
+	const payHandler = async () => {
+		// fetch('https://shop-demo2-topaz.vercel.app/api/create-checkout-session', {
+		// 	method: 'POST',
+		// 	headers: {
+		// 		'Content-Type': 'application/json',
+		// 	},
+		// 	body: JSON.stringify({
+		// 		items: cartProductCtx,
+		// 	}),
+		// })
+		// 	.then(res => {
+		// 		if (res.ok) return res.json()
+		// 		return res.json().then(json => {
+		// 			Promise.reject(json)
+		// 			console.log(json)
+		// 		})
+		// 	})
+		// 	.then(({ url }) => {
+		// 		window.location = url
+		// 	})
+		// 	.catch(e => {
+		// 		console.error(e.error)
+		// 	})
+
+		const response = await fetch('https://shop-demo2-topaz.vercel.app/api/hello')
+		console.log(response)
 	}
 
 	const removeItemHandler = (item: ProductSize) => {

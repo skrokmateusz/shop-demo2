@@ -56,7 +56,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
 })
 
 app.get('/api/hello', (req, res) => {
-	res.json('Hello')
+	res.json({ hello: 'hello' })
 })
 
 module.exports = app
