@@ -69,6 +69,7 @@
 	.shop-now {
 		display: flex;
 		background-color: var(--color-theme-100);
+		margin-bottom: 2rem;
 	}
 
 	.description {
