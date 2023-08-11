@@ -1,0 +1,36 @@
+.remove {
+	display: flex;
+	justify-content: end;
+	margin-right: 1rem;
+	font-size: 1.8rem;
+}
+
+.container {
+	height: 100vh;
+	padding: 2rem;
+	background-color: var(--color-pure-white);
+	transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.35, 1);
+	color: var(--color-pure-black);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding-bottom: 2rem;
+}
+
+.list ul {
+	list-style: none;
+	font-size: 2.2rem;
+}
+
+.list ul li {
+	text-transform: uppercase;
+}
+
+.list ul li:hover {
+	text-decoration: underline;
+}

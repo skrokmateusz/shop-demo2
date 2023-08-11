@@ -1,0 +1,91 @@
+.box {
+	display: block;
+	width: 100%;
+	padding: 2rem 1rem;
+	height: 20rem;
+	margin-bottom: 1rem;
+	position: relative;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s;
+	z-index: 100;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.title span:first-child {
+	margin-right: 0.5rem;
+}
+
+.title span:last-child {
+	margin-left: 0.5rem;
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	padding: 0.5rem;
+	margin-right: 1rem;
+	z-index: 99;
+	height: 100%;
+}
+
+.image img {
+	width: 100%;
+	max-height: 100%;
+}
+
+.description {
+	padding: 1rem;
+	width: 100%;
+	height: 100%;
+}
+
+.description h3 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+
+.price {
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+.size-title {
+	margin-right: 1rem;
+	font-weight: 700;
+}
+
+.buttons {
+	display: flex;
+	margin-right: 1rem;
+	height: 2.5rem;
+	width: 5rem;
+	border: 1px solid var(--color-gray-400);
+}
+
+.buttons button {
+	height: 100%;
+	width: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.remove {
+	display: flex;
+	justify-content: end;
+	margin-right: 1rem;
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+
+.remove:hover {
+	cursor: pointer;
+}

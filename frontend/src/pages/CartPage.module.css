@@ -1,0 +1,110 @@
+.header {
+	margin: 1rem;
+	text-align: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 2rem;
+}
+
+.list {
+	width: 100%;
+}
+
+.summary {
+	padding: 2rem;
+	width: 100%;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.h2-summary {
+	font-size: 2.2rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.h2-summary span:first-child {
+	margin-right: 0.5rem;
+}
+
+.summary p {
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.button {
+	background-color: var(--color-pure-white);
+	border: 2px solid var(--color-pure-black);
+	color: var(--color-pure-black);
+}
+
+.button:hover {
+	cursor: pointer;
+	background-color: var(--color-pure-black);
+	color: var(--color-pure-white);
+}
+
+.empty-cart-desc {
+	text-align: center;
+	font-size: 2.2rem;
+	margin-bottom: 2rem;
+}
+
+.go-shopping-btn {
+	text-align: center;
+	font-size: 1.4rem;
+	margin-bottom: 22rem;
+}
+
+.go-shopping-btn:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.header {
+	margin-bottom: 2rem;
+	font-size: 2.4rem;
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	.summary {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		flex-direction: row;
+		align-items: start;
+	}
+
+	.list {
+		width: 700px;
+	}
+
+	.summary {
+		position: sticky;
+		top: 13rem;
+		height: 20rem;
+		width: 400px;
+		text-align: center;
+	}
+
+	.summary p {
+		font-size: 1.4rem;
+	}
+
+	.h2-summary {
+		margin-bottom: 3rem;
+	}
+}

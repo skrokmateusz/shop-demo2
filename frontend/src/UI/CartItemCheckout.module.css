@@ -1,0 +1,93 @@
+.box {
+	display: block;
+	width: 100%;
+	padding: 2rem 1rem;
+	height: 20rem;
+	margin-bottom: 3rem;
+	position: relative;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s;
+	z-index: 100;
+}
+
+.box:last-child {
+	margin-bottom: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.title span:first-child {
+	margin-right: 0.5rem;
+}
+
+.title span:last-child {
+	margin-left: 0.5rem;
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	padding: 1rem;
+	margin-right: 1rem;
+	z-index: 99;
+	height: 100%;
+}
+
+.image img {
+	height: 90%;
+	width: 100%;
+}
+
+.description {
+	padding: 1rem;
+	width: 100%;
+}
+
+.description h3 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.price {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+
+.size-title {
+	margin-right: 1rem;
+	font-weight: 700;
+}
+
+.edit {
+	display: flex;
+	height: 3rem;
+	width: 11rem;
+	margin-bottom: 1rem;
+}
+
+.button {
+	border: 1px solid black;
+	height: 100%;
+	width: 3rem;
+}
+
+.edit input {
+	width: 5rem;
+	text-align: center;
+}
+
+.remove {
+	font-size: 1.2rem;
+}
+
+.remove:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}

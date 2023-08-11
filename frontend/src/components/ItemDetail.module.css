@@ -1,0 +1,262 @@
+.back-btn {
+	margin-left: 2rem;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+.back-btn:hover {
+	text-decoration: underline;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+.images {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+}
+
+.big-image {
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 3rem;
+}
+
+.big-image img {
+	width: 100%;
+}
+
+.small-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.small-image {
+	width: 7rem;
+	height: 7rem;
+	overflow: hidden;
+}
+
+.small-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.description h2 {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+
+.descr {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+
+.price {
+	margin-left: 0;
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.star {
+	display: flex;
+	align-items: center;
+}
+
+.star p {
+	font-size: 2rem;
+	margin-right: 1rem;
+}
+
+.form {
+	margin: 2rem 0;
+}
+
+.form label {
+	font-size: 1.6rem;
+}
+
+.form select {
+	width: 100%;
+	font-size: 1.6rem;
+	padding: 1rem 2rem;
+	border: 2px solid var(--color-pure-black);
+	font-family: 'Blinker', sans-serif;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.invalid-size {
+	text-align: center;
+	color: red;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+	width: 100%;
+}
+
+.add-btn {
+	width: 100%;
+	height: 100%;
+	padding: 1rem 2rem;
+	margin: 2rem 0;
+	background-color: var(--color-pure-black);
+	border: 2px solid transparent;
+	text-transform: uppercase;
+	font-size: 2rem;
+	letter-spacing: 0.2px;
+	font-weight: bold;
+	color: var(--color-pure-white);
+	transition: background-color 0.3s, color 0.3s;
+	font-family: 'Blinker', sans-serif;
+}
+
+.add-btn:hover {
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid var(--color-pure-black);
+	color: var(--color-pure-black);
+}
+
+.amount {
+	padding: 1rem;
+	height: 100%;
+	width: 5rem;
+	font-size: 2rem;
+	margin-right: 1rem;
+	font-family: 'Blinker', sans-serif;
+	text-align: center;
+}
+
+.also-like {
+	font-size: 2.4rem;
+	margin-left: 2rem;
+}
+
+@media (min-width: 600px) {
+	.back-btn {
+		font-size: 1.6rem;
+	}
+
+	.small-image {
+		width: 12rem;
+		height: 12rem;
+	}
+
+	.description h2 {
+		font-size: 2.2rem;
+		margin-bottom: 1.2rem;
+	}
+
+	.descr {
+		margin-bottom: 1.2rem;
+		font-size: 1.6rem;
+	}
+	.price {
+		font-size: 2.4rem;
+	}
+}
+
+@media (min-width: 900px) {
+	.container {
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.images {
+		height: 480px;
+		flex-direction: row;
+	}
+
+	.small-images {
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.small-image {
+		width: 12rem;
+		height: 12rem;
+	}
+
+	.big-image {
+		height: 100%;
+padding: 0 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+	}
+
+	.description {
+		padding: 2rem;
+		height: 100%;
+	}
+
+	.small-image img {
+		padding: 1rem;
+	}
+
+	.small-image img:hover {
+		cursor: pointer;
+	}
+
+	.big-image img {
+		width: auto;
+		height: 100%;
+		width: 40rem;
+	}
+
+	.description h2 {
+		font-size: 2.8rem;
+		margin-bottom: 2rem;
+	}
+
+	.descr {
+		margin-bottom: 2rem;
+		font-size: 1.6rem;
+		margin-left: 0;
+	}
+
+	.back-btn {
+		padding-left: 2rem;
+		font-weight: 500;
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
+		font-family: 'Blinker', sans-serif;
+	}
+
+	.form label {
+		font-size: 2rem;
+		margin: 0 2rem 2rem 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.option {
+		display: flex;
+	}
+
+	.form option {
+		padding: 1rem 2rem;
+	}
+
+	.form select {
+		font-size: 2rem;
+		width: auto;
+	}
+}

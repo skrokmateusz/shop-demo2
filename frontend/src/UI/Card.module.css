@@ -1,0 +1,51 @@
+.box {
+	display: block;
+	width: 250px;
+	height: 450px;
+	padding: 2rem 1rem;
+	margin-bottom: 3rem;
+	position: relative;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s;
+}
+
+.box:hover {
+	cursor: pointer;
+	transform: scale(102%);
+}
+
+.image {
+	height: 270px;
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.img {
+	width: 100%;
+	max-height: 100%;
+	margin-bottom: 2rem;
+}
+
+.description {
+	position: relative;
+	height: 120px;
+}
+
+.title,
+.price {
+	margin: 0.5em;
+	font-weight: 600;
+}
+
+.title {
+	font-size: 1.6rem;
+	bottom: 5rem;
+}
+
+.price {
+	position: absolute;
+	bottom: 0;
+	font-size: 2rem;
+}
