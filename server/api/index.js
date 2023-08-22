@@ -46,7 +46,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
 					quantity: item.amount,
 				}
 			}),
-			success_url: `https://shop-demo2-p1cc.vercel.app//success`,
+			success_url: `https://shop-demo2-p1cc.vercel.app/success`,
 			cancel_url: `https://shop-demo2-p1cc.vercel.app/cancel`,
 		})
 		res.json({ url: session.url })
@@ -59,6 +59,6 @@ app.get('/api/hello', (req, res) => {
 	res.json({ hello: 'hello' })
 })
 
-app.listen('https://shop-demo2-topaz.vercel.app/')
+app.listen('https://shop-demo2-murex.vercel.app/')
 
 module.exports = app
