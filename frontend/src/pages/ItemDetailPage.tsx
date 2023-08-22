@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useLoaderData, defer } from 'react-router-dom'
 
 import ItemDetail from '../components/ItemDetail'
@@ -7,12 +6,6 @@ import Product from '../models/product'
 
 const ItemDetailPage = () => {
 	const products = useLoaderData() as { products: Product[]; categoriesList: string[] }
-	// useEffect(() => {
-	// 	window.scrollTo({
-	// 		top: 0,
-	// 		behavior: 'smooth',
-	// 	})
-	// }, [])
 
 	return (
 		<>

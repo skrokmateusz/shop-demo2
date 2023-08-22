@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import CartItemCheckout from '../UI/CartItemCheckout'
@@ -12,13 +12,6 @@ import classes from '../pages/CartPage.module.css'
 
 const CartPage = () => {
 	const cartProductCtx = useContext(CartProductContext)
-
-	// useEffect(() => {
-	// 	window.scrollTo({
-	// 		top: 0,
-	// 		behavior: 'smooth',
-	// 	})
-	// }, [])
 
 	const payHandler = () => {
 		fetch('https://shop-demo2-murex.vercel.app//api/create-checkout-session', {

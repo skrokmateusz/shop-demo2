@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import Card from '../UI/Card'
@@ -10,13 +10,6 @@ import classes from '../pages/CategoryPage.module.css'
 const MensClothesPage: React.FC = () => {
 	const productsCtx = useContext(ProductsContext)
 	const param = useParams()
-
-	// useEffect(() => {
-	// 	window.scrollTo({
-	// 		top: 0,
-	// 		behavior: 'smooth',
-	// 	})
-	// }, [])
 
 	return (
 		<>
