@@ -16,7 +16,6 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 	const amountInputRef = useRef<HTMLInputElement>(null)
 	const cartProductCtx = useContext(CartProductContext)
 
-
 	const product = props.productsCtx.products.filter((prod: Product) => prod.title.trim() === param.productsId)
 	const prodId = product[0]
 
@@ -40,7 +39,9 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 		event.preventDefault()
 		const enteredAmount: number = +amountInputRef.current!.value
 
-		const existingItem = cartProductCtx.items.findIndex((product: ProductSize) => product.sizeId === `${chosenSize}${prodId.title}`)
+		const existingItem = cartProductCtx.items.findIndex(
+			(product: ProductSize) => product.sizeId === `${chosenSize}${prodId.title}`
+		)
 
 		if (existingItem !== -1) {
 			setAlreadyInCart(true)
@@ -134,7 +135,7 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 								</div>
 							) : null}
 							{isSizeChosen && <p className={classes['invalid-size']}>You must add your size!</p>}
-{alreadyInCart && <p className={classes['invalid-size']}>You have already added this item to cart!</p>}
+							{alreadyInCart && <p className={classes['invalid-size']}>You have already added this item to cart!</p>}
 							<div className={classes.buttons}>
 								<input
 									className={classes.amount}
