@@ -9,7 +9,7 @@ const cors = require('cors')
 app.use(express.json())
 app.use(
 	cors({
-		origin: 'https://shop-demo2-p1cc.vercel.app/',
+		origin: 'https://shop-demo2-client.vercel.app/',
 	})
 )
 
@@ -46,8 +46,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
 					quantity: item.amount,
 				}
 			}),
-			success_url: `https://shop-demo2-p1cc.vercel.app/success`,
-			cancel_url: `https://shop-demo2-p1cc.vercel.app/cancel`,
+			success_url: `https://shop-demo2-client.vercel.app//success`,
+			cancel_url: `https://shop-demo2-client.vercel.app//cancel`,
 		})
 		res.json({ url: session.url })
 	} catch (e) {
@@ -59,6 +59,6 @@ app.get('/api/hello', (req, res) => {
 	res.json({ hello: 'hello' })
 })
 
-app.listen('https://shop-demo2-murex.vercel.app/')
+app.listen('https://shop-demo2-server.vercel.app/')
 
 module.exports = app
