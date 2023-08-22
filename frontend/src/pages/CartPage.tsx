@@ -21,7 +21,7 @@ const CartPage = () => {
 	// }, [])
 
 	const payHandler = () => {
-		fetch('https://shop-demo2-topaz.vercel.app/api/create-checkout-session', {
+		fetch('https://shop-demo2-murex.vercel.app//api/create-checkout-session', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
