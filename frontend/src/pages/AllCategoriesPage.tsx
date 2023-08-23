@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import Card from '../UI/Card'
@@ -12,6 +12,13 @@ const AllCategoriesPage: React.FC = () => {
 
 	let categories: string[] = []
 	productsCtx.products.filter(item => (categories.includes(item.category) ? null : categories.push(item.category)))
+
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}, [])
 
 	return (
 		<>

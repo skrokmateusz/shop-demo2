@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import ImageCategories from '../components/ImageCategories'
@@ -8,6 +9,13 @@ import SliderJS from '../components/SliderJS'
 import classes from './HomePage.module.css'
 
 const HomePage: React.FC = () => {
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}, [])
+
 	return (
 		<>
 			<main>
