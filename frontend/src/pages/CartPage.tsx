@@ -36,10 +36,9 @@ const CartPage = () => {
 				if (res.ok) {
 					return res.json()
 				} else
-				return res.json().then(json => {
-					Promise.reject(json)
-					console.log(json)
-				})
+					return res.json().then(json => {
+						Promise.reject(json)
+					})
 			})
 			.then(({ url }) => {
 				window.location = url
@@ -47,7 +46,7 @@ const CartPage = () => {
 			.catch(e => {
 				console.error(e.error)
 			})
-			setPurchaseItems(false)
+		// setPurchaseItems(false)
 		// const response = await fetch('https://shop-demo2-topaz.vercel.app/api/hello')
 		// console.log(response)
 	}
@@ -63,9 +62,6 @@ const CartPage = () => {
 	const decrementItemHandler = (item: ProductSize) => {
 		cartProductCtx.decrementItem(item)
 	}
-
-	
-
 
 	return (
 		<>
@@ -105,8 +101,12 @@ const CartPage = () => {
 								<span>${cartProductCtx.totalAmount.toFixed(2)}</span>
 							</h2>
 							{/* <Button text={`${buttonText}`} className={classes.button} onClick={payHandler} /> */}
-							<button className={purchaseItems ? classes.disabled : classes.button } onClick={payHandler} disabled={purchaseItems}>
-								<span>PURCHASE</span><span className={classes.spinner}>{purchaseItems ? <LoadingSpinner /> : null}</span>
+							<button
+								className={purchaseItems ? classes.disabled : classes.button}
+								onClick={payHandler}
+								disabled={purchaseItems}>
+								<span>PURCHASE</span>
+								<span className={classes.spinner}>{purchaseItems ? <LoadingSpinner /> : null}</span>
 							</button>
 							<p>Shipping, taxes and discount codes calculated at checkout.</p>
 						</div>
