@@ -46,8 +46,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
 					quantity: item.amount,
 				}
 			}),
-			success_url: `https://shop-demo2-client.vercel.app//success`,
-			cancel_url: `https://shop-demo2-client.vercel.app//cancel`,
+			success_url: `https://shop-demo2-client.vercel.app/success`,
+			cancel_url: `https://shop-demo2-client.vercel.app/cancel`,
 		})
 		res.json({ url: session.url })
 	} catch (e) {
