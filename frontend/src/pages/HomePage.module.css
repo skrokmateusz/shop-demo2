@@ -73,7 +73,7 @@
 	}
 
 	.description {
-		width: 600px;
+		width: 60rem;
 	}
 
 	.description h3 {
@@ -83,6 +83,8 @@
 	.description p {
 		font-size: 1.8rem;
 		margin: 0 10rem;
+		width: 40rem;
+margin-bottom: 2rem;
 	}
 
 	.image {

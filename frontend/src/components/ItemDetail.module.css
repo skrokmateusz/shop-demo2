@@ -145,6 +145,7 @@
 .also-like {
 	font-size: 2.4rem;
 	margin-left: 2rem;
+	margin-bottom: 3rem;
 }
 
 @media (min-width: 600px) {
@@ -175,6 +176,7 @@
 	.container {
 		flex-direction: row;
 		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	.images {

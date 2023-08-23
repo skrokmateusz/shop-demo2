@@ -1,4 +1,4 @@
-import React, { FormEvent, useContext, useState, useRef, ChangeEvent } from 'react'
+import React, { FormEvent, useContext, useState, useRef, ChangeEvent, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import StarRating from './StarRating'
@@ -34,6 +34,13 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 		setIsSizeChozen(false)
 		setAlreadyInCart(false)
 	}
+
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}, [])
 
 	const submitHandler = (event: FormEvent) => {
 		event.preventDefault()
