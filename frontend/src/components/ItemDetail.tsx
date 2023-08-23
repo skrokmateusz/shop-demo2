@@ -24,6 +24,13 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 	const [chosenSize, setChosenSize] = useState<string>('')
 	const [alreadyInCart, setAlreadyInCart] = useState<boolean>(false)
 
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}, [prodId])
+
 	const pictureHandler = (event: any) => {
 		setBigPicture(event.target.closest('img').src)
 	}

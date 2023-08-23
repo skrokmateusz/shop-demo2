@@ -1,8 +1,8 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import CartItemCheckout from '../UI/CartItemCheckout'
-import Button from '../UI/Button'
+import LoadingSpinner from '../UI/LoadingSpinner'
 
 import ProductSize from '../models/productSize'
 
@@ -11,6 +11,7 @@ import { CartProductContext } from '../product-context/cart-product'
 import classes from '../pages/CartPage.module.css'
 
 const CartPage = () => {
+	const [purchaseItems, setPurchaseItems] = useState(false)
 	const cartProductCtx = useContext(CartProductContext)
 
 	useEffect(() => {
@@ -21,6 +22,7 @@ const CartPage = () => {
 	}, [])
 
 	const payHandler = () => {
+		setPurchaseItems(true)
 		fetch('https://shop-demo2-server.vercel.app/api/create-checkout-session', {
 			method: 'POST',
 			headers: {
@@ -31,7 +33,9 @@ const CartPage = () => {
 			}),
 		})
 			.then(res => {
-				if (res.ok) return res.json()
+				if (res.ok) {
+					return res.json()
+				} else
 				return res.json().then(json => {
 					Promise.reject(json)
 					console.log(json)
@@ -43,7 +47,7 @@ const CartPage = () => {
 			.catch(e => {
 				console.error(e.error)
 			})
-
+			setPurchaseItems(false)
 		// const response = await fetch('https://shop-demo2-topaz.vercel.app/api/hello')
 		// console.log(response)
 	}
@@ -59,6 +63,9 @@ const CartPage = () => {
 	const decrementItemHandler = (item: ProductSize) => {
 		cartProductCtx.decrementItem(item)
 	}
+
+	
+
 
 	return (
 		<>
@@ -97,8 +104,10 @@ const CartPage = () => {
 								<span>Subtotal:</span>
 								<span>${cartProductCtx.totalAmount.toFixed(2)}</span>
 							</h2>
-							<Button text="PURCHASE" className={classes.button} onClick={payHandler} />
-
+							{/* <Button text={`${buttonText}`} className={classes.button} onClick={payHandler} /> */}
+							<button className={purchaseItems ? classes.disabled : classes.button } onClick={payHandler} disabled={purchaseItems}>
+								<span>PURCHASE</span><span className={classes.spinner}>{purchaseItems ? <LoadingSpinner /> : null}</span>
+							</button>
 							<p>Shipping, taxes and discount codes calculated at checkout.</p>
 						</div>
 					) : null}
