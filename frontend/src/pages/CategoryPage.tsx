@@ -37,7 +37,7 @@ const MensClothesPage: React.FC = () => {
 				<div className={classes.container}>
 					{productsCtx.products.map(item =>
 						item.category === param.categoryTitle ? (
-							<Card key={item.id} image={item.image} title={item.title} price={item.price} path={item.title} />
+							<Card key={item.id} image={item.image} title={item.title} price={item.price} path={`${item.title.replaceAll('/', '-')}`} />
 						) : null
 					)}
 				</div>

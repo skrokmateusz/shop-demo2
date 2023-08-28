@@ -43,7 +43,7 @@ const AllCategoriesPage: React.FC = () => {
 							image={item.image}
 							title={item.title}
 							price={item.price}
-							path={`../${item.category}/${item.title}`}
+							path={`../${item.category}/${item.title.replaceAll('/', '-')}`}
 						/>
 					))}
 				</div>

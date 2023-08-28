@@ -16,7 +16,7 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 	const amountInputRef = useRef<HTMLInputElement>(null)
 	const cartProductCtx = useContext(CartProductContext)
 
-	const product = props.productsCtx.products.filter((prod: Product) => prod.title.trim() === param.productsId)
+	const product = props.productsCtx.products.filter((prod: Product) => prod.title.replaceAll('/','-').trim() === param.productsId)
 	const prodId = product[0]
 
 	const [isSizeChosen, setIsSizeChozen] = useState<boolean>(false)

@@ -26,7 +26,7 @@ function SliderJS(props) {
 								title={prod.title}
 								image={prod.image}
 								price={prod.price}
-								path={`/categories/${prod.category}/${prod.title}`}
+								path={`/categories/${prod.category}/${prod.title.replaceAll('/', '-')}`}
 							/>
 						</SwiperSlide>
 					) : null

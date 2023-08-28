@@ -7,6 +7,7 @@ import Product from '../models/product'
 
 const ItemDetailPage = () => {
 	const products = useLoaderData() as { products: Product[]; categoriesList: string[] }
+	console.log(products)
 
 	useEffect(() => {
 		window.scrollTo({
@@ -34,6 +35,7 @@ export const loader = async () => {
 	for (const key in data) {
 		productList.push(data[key])
 	}
+
 
 	let categoriesList: string[] = []
 
