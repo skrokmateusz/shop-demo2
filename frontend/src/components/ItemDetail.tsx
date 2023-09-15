@@ -154,7 +154,7 @@ const ItemDetail: React.FC<{ productsCtx: { products: Product[]; categoriesList:
 								<input
 									className={classes.amount}
 									type="number"
-									min={0}
+									min={1}
 									step={1}
 									defaultValue={1}
 									ref={amountInputRef}
